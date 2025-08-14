@@ -24,6 +24,29 @@
 //  2010-05-13 - Added ellipsis
 
 
+//NyGy Custom layout
+partial alphanumeric_keys modifier_keys
+xkb_symbols "nygy" {
+  //include "latin"
+  //include "hu(def_101)"
+  //include "hu(def_qwertz)"
+  //include "hu(def_dot)"
+  //include "hu(def_nodead)"
+  //include "hu(def_common)"
+  //include "level3(lalt_switch)"
+  //include "level3(ralt_switch)"
+  key <TLDE>  {[  0,  U002a  ]};  //[49,  "0",  U0030,  "*",  U002a,  ,  ],
+  key <AE01>  {[  1,  U0027  ]};  //[10,  "1",  U0031,  "'",  U0027,  ,  ],
+  key <AE02>  {[  2,  U0022  ]};  //[11,  "2",  U0032,  """,  U0022,  ,  ],
+  key <AE03>  {[  3,  U002b  ]};  //[12,  "3",  U0033,  "+",  U002b,  ,  ],
+  key <AE04>  {[  4,  U0021  ]};  //[13,  "4",  U0034,  "!",  U0021,  ,  ],
+  key <AE05>  {[  5,  U0025  ]};  //[14,  "5",  U0035,  "%",  U0025,  ,  ],
+  key <AD01>  {[  q,  Q,  U0025  ]};  //[24,  "q",  U0071,  "Q",  U0051,  "\",  U005c,  ,  ],
+  key <AC01>  {[  a,  A,  U0041  ]};  //[38,  "a",  U0061,  "A",  U0041,  "<",  U003c,  ,  ],
+  key <AB01>  {[  y,  Y  ]};  //[52,  "y",  U0079,  "Y",  U0059,  ,  ,  ,  ],
+};
+
+
 // Default layout
 default partial
 xkb_symbols "basic" {
