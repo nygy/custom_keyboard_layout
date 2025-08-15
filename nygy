@@ -23,3 +23,4 @@ partial alphanumeric_keys modifier_keys xkb_symbols "nygy" {
 
   key <AB01>  {[  y,  Y  ]};
   key <AB02>  {[  x,  X,  U007c  ]};
+  };
