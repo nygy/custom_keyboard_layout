@@ -13,7 +13,7 @@ button_gap = 2.85
 row_offsets = [0, 29, 33, 43]
 font_sizes = [22, 14, 14]
 x_offsets = [0, 0, 2.5]
-y_offsets = [0,4, 4]
+y_offsets = [0, 4, 4]
 
 
 def draw_button(cen_x: float, cen_y: float, content: list) -> None:
@@ -44,7 +44,8 @@ for row in rows:
     for button_position in range(row_len):
         pos_x = button_position*(button_size + button_gap) + row_offsets[row-1] + 20
         pos_y = row*18
-        button_texts = [txt for txt in layout_def[button_index][4:] if isinstance(txt, str)]
+        button_texts = [txt for txt in layout_def[button_index][3:] if isinstance(txt, str)]
+        print(f'{button_position=} {button_index=} {button_texts=} {pos_x=:.2f} {pos_y=:.2f}')
         if button_texts[0].isalpha():
             main_char = button_texts[1]
             small_char = ""
@@ -56,7 +57,7 @@ for row in rows:
         else:
             AltGr_char = ""
         print_texts = [main_char, small_char, AltGr_char]
-        print(f'{button_position=} {button_index=} {button_texts=} {print_texts=} {pos_x=:.2f} {pos_y=:.2f}')
+        print(f'{print_texts=}')
 
         draw_button(pos_x, pos_y, print_texts)
         button_index = button_index + 1
