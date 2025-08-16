@@ -19,7 +19,7 @@ partial alphanumeric_keys modifier_keys xkb_symbols "nygy" {
 
   key <AC01>  {[  a,  A,  U003c  ]};  //[38,  "a",  U0061,  "A",  U0041,  "<",  U003c,  ,  ],
 
-  key <AC12>  {[  U0171,  U0170  ]};
+  key <AC12>  {[  U00171,  U00170  ]}; // [36,  "ű",  U00171,  "Ű",  U00170,  ,  ],
 
   key <AB01>  {[  y,  Y  ]};
   key <AB02>  {[  x,  X,  U007c  ]};
