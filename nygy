@@ -26,7 +26,7 @@ partial alphanumeric_keys modifier_keys xkb_symbols "nygy" {
   key <AD10> {[U0070,U0050]}; //['p', 'P']
   key <AD11> {[U0151,U0150]}; //['ő', 'Ő']
   key <AD12> {[U00FA,U00DA]}; //['ú', 'Ú']
-  key <AD13> {[U0171,U0170]}; //['ű', 'Ű']
+  key <AC12> {[U0171,U0170]}; //['ű', 'Ű']
   key <AC01> {[U0061,U0041,U003C]}; //['a', 'A', '<']
   key <AC02> {[U0073,U0053,U003E]}; //['s', 'S', '>']
   key <AC03> {[U0064,U0044]}; //['d', 'D']

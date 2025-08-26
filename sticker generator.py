@@ -6,20 +6,23 @@ with open('custom layout.txt', 'r') as file:
     file_content = file.read()
 layout_def = ast.literal_eval(file_content)
 
-dwg: Drawing = svgwrite.Drawing('pattern.svg', size=("297mm", "210mm"), profile='tiny')
+dwg: Drawing   = svgwrite.Drawing('pattern.svg', size=("297mm", "210mm"), profile='tiny')
 sticker_radius = 6
-button_size = 16
-button_gap = 2.85
-row_offsets = [0, 29, 33, 43]
-font_sizes = [22, 14, 14]
-x_offsets = [0, 0, 2.5]
-y_offsets = [0, 4, 4]
+button_size    = 16
+button_gap     = 2.85
+row_offsets    = [0, 29, 33, 43]
+font_sizes     = [22, 14, 14]
+x_offsets      = [0, 0, 2.5]
+y_offsets      = [0, 4, 4]
 
 
 def draw_button(cen_x: float, cen_y: float, content: list) -> None:
     dwg.add(dwg.circle(center=(f'{cen_x}mm', f'{cen_y}mm'),
                        r=f'{sticker_radius}mm', fill='none',
                        stroke='gray', stroke_width='0.1mm'))
+    dwg.add(dwg.circle(center=(f'{cen_x}mm', f'{cen_y}mm'),
+                       r=f'{sticker_radius+0.5}mm', fill='none',
+                       stroke='black', stroke_width='0.1mm'))
     dwg.add(dwg.rect(insert=(f'{cen_x-button_size/2}mm', f'{cen_y-button_size/2}mm'),
                      fill='none',
                      size=(f'{button_size-0.5}mm', f'{button_size-0.5}mm'),
